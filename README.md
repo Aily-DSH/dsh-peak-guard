@@ -141,6 +141,14 @@ lib/client.js     客户端半：设置页（状态徽章、会话树、批量�
 cordis.patch.yml  把插件行插入 profile 的 cordis 配置
 ```
 
+## 赞赏
+
+如果这个插件帮你省了钱，欢迎扫码请作者喝一杯 ☕（纯属自愿，不影响使用和更新）
+
+<p align="center">
+  <img src="assets/reward-qr.png" alt="赞赏码" width="260">
+</p>
+
 ## English
 
 **dsh-peak-guard** is a DeepSeek Harness plugin that cuts spend on peak-priced hours. DeepSeek bills weekday 09:00–12:00 and 14:00–18:00 (Asia/Shanghai) at roughly double the off-peak rate, and everything else — lunch break, nights, weekends, Chinese public holidays — at half price.
@@ -153,6 +161,8 @@ dsh plugin --profile desktop add "git+https://github.com/Aily-DSH/dsh-peak-guard
 ```
 
 Requires DeepSeek Harness `>= 0.2.1-rc.2` and Node `^22.19.0 || >=24.0.0`.
+
+**Sponsor:** if this plugin saved you money, you can buy the author a coffee — scan `assets/reward-qr.png`.
 
 ## License
 
