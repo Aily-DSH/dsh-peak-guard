@@ -1,6 +1,6 @@
 {
   "name": "dsh-peak-guard",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Peak-hour guard: warns before DeepSeek peak-priced hours, stops the sessions you pick when peak starts, resumes them when off-peak returns. Holiday and make-up-workday aware.",
   "type": "module",
   "engines": {
