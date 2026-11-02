@@ -1,0 +1,62 @@
+{
+  "name": "dsh-peak-guard",
+  "version": "0.2.0",
+  "description": "Peak-hour guard: warns before DeepSeek peak-priced hours, stops the sessions you pick when peak starts, resumes them when off-peak returns. Holiday and make-up-workday aware.",
+  "type": "module",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "dependencies": {
+    "chinese-days": "^1.5.9"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.1-rc.2"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-renderer"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.1-rc.2"
+  },
+  "license": "MIT",
+  "author": "Aily-DSH",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aily-DSH/dsh-peak-guard.git"
+  },
+  "homepage": "https://github.com/Aily-DSH/dsh-peak-guard#readme",
+  "bugs": {
+    "url": "https://github.com/Aily-DSH/dsh-peak-guard/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "pricing",
+    "peak-hours",
+    "off-peak",
+    "cost-saving",
+    "scheduler"
+  ]
+}

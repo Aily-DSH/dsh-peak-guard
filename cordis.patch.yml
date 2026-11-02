@@ -1,0 +1,4 @@
+# dsh-peak-guard bundle patch: inserts its plugin row into the web roster.
+- insert:
+    - id: peak-guard
+      name: 'dsh-peak-guard'
