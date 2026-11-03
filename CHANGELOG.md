@@ -1,5 +1,12 @@
 # 更新记录
 
+## 0.3.1
+
+- 修复 Super Agent 项目会话被误判为 Harness 内部会话而隐藏：位于 `~/.dsh/state/superagent-<name>/repos/<repo>` 的克隆目录现在按项目显示，并在工作区行加「Super Agent」标签
+- 内部会话判定收窄：只隐藏 `orchestrator-*` 会话、Super Agent 状态目录自身以及未注册的 `.dsh` 路径
+- 会话列表提示语补充 Super Agent 说明
+
+
 ## 0.3.0
 
 - 设置页布局重排：总开关与时间改为并排卡片；提示语、节假日覆盖收进可折叠的「高级设置 · 提示语与节假日覆盖」
