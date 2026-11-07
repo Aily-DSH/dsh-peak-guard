@@ -1,5 +1,12 @@
 # 更新记录
 
+## 0.3.2
+
+- 新增 `~/.dsh/dsh-peak-guard/state.json` 阶段快照（每次 tick 与启动时写入）：`phase`、`nextChangeAt`、`nextPeakStartAt`、`nextOffpeakStartAt`、`workday`、`lastAction`
+- 目的是让其它插件读到同一个月历判断，而不必各自重算：`dsh-approval-inbox` 用它把待批的批准压到谷时边界再投递，从而在峰时几乎不产生算力花费
+- 快照只是投影，不是真相：写入失败会被吞掉，本插件的行为完全不依赖它；超过 5 分钟未更新的快照会被消费方视为不存在
+- 本改动对既有功能无行为影响，可安全回滚（删除 `publishState` 调用即可）
+
 ## 0.3.1
 
 - 修复 Super Agent 项目会话被误判为 Harness 内部会话而隐藏：位于 `~/.dsh/state/superagent-<name>/repos/<repo>` 的克隆目录现在按项目显示，并在工作区行加「Super Agent」标签
